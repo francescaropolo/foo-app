@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+/* -- forms -- */
+form {
+
+  &.is-processing {
+	  opacity: 0.5;
+  }
+
+  .field {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-style: bold;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .submit {
+    padding-top: 20px;
+  }
+
+  .submit button {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: grey;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 1px 11px lightgray;
+  }
+
+  .field.has-error label {
+    color: orange;
+  }
+
+  .validation {
+    margin: 5px 0 10px;
+    color: orange;
+  }
+
+  .field.has-error input {
+    border: 1px solid  orange;
+  }
+}
+ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  button {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0px 1px 11px lightgray;
+  }
+}
+
+li {
+  list-style: none;
+  background-color: white;
+  box-shadow: 0px 1px 11px lightgrey;
+  width: 85%;
+  margin: 0 auto 20px;
+  padding: 20px;
+}
+
+
+
