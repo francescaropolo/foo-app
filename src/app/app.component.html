@@ -1,57 +1,14 @@
-<!-- <form>
-  <div class="editing">
-    <h2>Add another foo</h2>
-    <input type="text" name="bar" [(ngModel)]="newFoo.bar">
-    <input type="text" name="baz" [(ngModel)]="newFoo.baz">
-    <button (click)="handleAddClick()">Add!</button>
-  </div>
-  <div class="card preview">
-    <h2>{{newFoo.bar}}</h2>
-    <h3>{{newFoo.baz}}</h3>
-  </div>
-</form> -->
-<h1>Foo App</h1>
+<header id="site-header">
+  <h1>Foo App</h1>
+  <a [routerLink]="['/']">Home</a>
+  <a [routerLink]="['/create']">Create</a>
+  <a [routerLink]="['/list']">List</a>
+</header>
 
-<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<main id="site-main">
+  <router-outlet></router-outlet>
+</main>
 
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && barField.errors}">
-    <label>Bar</label>
-    <input type="text" name="bar" [(ngModel)]="newFoo.bar" #barField="ngModel" required minlength="6" [disabled]="processing" />
-    <div *ngIf="feedbackEnabled && barField.errors || barField.dirty && barField.errors">
-      <p *ngIf="barField.errors.required" class="validation">bar required</p>
-      <p *ngIf="barField.errors.minlength" class="validation">bar is too short</p>
-    </div>
-  </div>
-
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && bazField.errors}">
-    <label>Baz</label>
-    <input type="text" name="baz" [(ngModel)]="newFoo.baz" #bazField="ngModel" required minlength="6" [disabled]="processing" />
-    <div *ngIf="feedbackEnabled && bazField.errors || bazField.dirty && bazField.errors">
-      <p *ngIf="bazField.errors.required" class="validation">baz required</p>
-      <p *ngIf="bazField.errors.minlength" class="validation">baz is too short</p>
-    </div>
-  </div>
-
-  <div class="card preview">
-    <h2>{{newFoo.bar}}</h2>
-    <h3>{{newFoo.baz}}</h3>
-  </div>
-
-  <div class="field submit">
-    <button type="submit" [disabled]="processing">Add!</button>
-    <div *ngIf="feedbackEnabled && form.invalid">
-      <p class="validation">there are errors in the form, please review the fields</p>
-    </div>
-  </div>
-</form>
-
-<!-- <p *ngIf="error">There has been an error please try again</p> -->
-
-
-<ul>
-  <li *ngFor="let foo of foos">
-    <h3>{{foo.bar}}</h3>
-    <h3>{{foo.baz}}</h3>
-    <button (click)="handleDeleteClick(foo._id)">Delete!</button>
-  </li>
-</ul>
+<footer id="site-footere">
+  <p>nice footer</p>
+</footer>

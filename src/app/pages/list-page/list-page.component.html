@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let foo of foos">
+    <a [routerLink]="['/detail', foo._id]">
+      <h3>{{foo.bar}}</h3>
+      <h3>{{foo.baz}}</h3>
+    </a>
+    <button (click)="handleDeleteClick(foo._id)">Delete!</button>
+  </li>
+</ul>
