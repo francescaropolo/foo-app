@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'create',  component: CreatePageComponent },
   { path: 'list', component: ListPageComponent },
-  { path: 'detail/:id', component: DetailPageComponent }
+  { path: 'detail/:id', component: DetailPageComponent },
   { path: '**', component: NotFoundPageComponent }
 ];
 
